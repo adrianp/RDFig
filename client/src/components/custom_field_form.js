@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { addCustomField } from '../actions';
 
 
 class CustomFieldInput extends Component {
@@ -19,9 +21,8 @@ class CustomFieldInput extends Component {
   }
 
   handleSubmit(e) {
-    console.log("Ontoloy: ", this.state.fieldOntology)
-    console.log("Name: ", this.state.fieldName)
     e.preventDefault();
+    this.props.addCustomField(this.state.fieldOntology, this.state.fieldName);
   }
 
   render() {
@@ -42,5 +43,18 @@ class CustomFieldInput extends Component {
 
 }
 
-export default CustomFieldInput;
+const CustomFieldInputContainer = connect(
+  (state) => {
+    return {};
+  },
+  (dispatch) => {
+    return {
+      "addCustomField": (fieldOntology, fieldName) => {
+        dispatch(addCustomField({fieldOntology, fieldName}));
+      }
+    }
+  }
+)(CustomFieldInput);
+
+export default CustomFieldInputContainer;
 
