@@ -10,6 +10,7 @@ import { createStore } from 'redux'
 import { render } from 'react-dom'
 import { applyMiddleware } from 'redux';
 import logger from "redux-logger";
+import thunkMiddleware from 'redux-thunk';
 
 
 class App extends Component {
@@ -43,7 +44,7 @@ const MyApp = connect(
 )(App)
 
 
-const store = createStore(rdfApp, applyMiddleware(logger));
+const store = createStore(rdfApp, applyMiddleware(thunkMiddleware, logger));
 
 render(
   <Provider store={store}>

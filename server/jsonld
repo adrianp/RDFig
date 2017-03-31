@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:ns1="http://purl.org/ontology/bibo/"
+   xmlns:ns3="http://vivoweb.org/ontology/core#"
+   xmlns:ns5="http://www.w3.org/2006/vcard/ns#"
+   xmlns:ns6="http://purl.obolibrary.org/obo/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://figshare.com/articles/TAO_Facebook_s_Distributed_Data_Store_for_the_Social_Graph/2688022">
+    <ns3:datePublished rdf:resource="http://openvivo.org/a/date2016-02-23"/>
+    <rdfs:label>TAO: Facebook's Distributed Data Store for the Social Graph</rdfs:label>
+    <dc:rights>CC BY</dc:rights>
+    <ns3:dateModified rdf:resource="http://openvivo.org/a/date2016-02-23"/>
+    <ns3:dateCreated rdf:resource="http://openvivo.org/a/date2016-02-23"/>
+    <ns1:freetextKeyword>distributed systems</ns1:freetextKeyword>
+    <ns1:doi>10.6084/m9.figshare.2688022.v1</ns1:doi>
+    <ns1:freetextKeyword>Social Networks</ns1:freetextKeyword>
+    <dc:spatial>romania</dc:spatial>
+    <ns1:abstract>This paper presents TAO, Facebook's solution for storing and efficiently serving its social graph. A data model, an API for querying this data model and the hardware infrastructure put in place for this are detailed, along with a real-world performance evaluation.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This presentation was part of the first Papers We Love meetup in Iasi, Romania, in January 2016.&lt;/div&gt;</ns1:abstract>
+    <ns1:freetextKeyword>infrastructure</ns1:freetextKeyword>
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/Slideshow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://figshare.com/authors/Adrian-Tudor_Panescu/1402906-vcard">
+    <ns5:hasName rdf:resource="https://figshare.com/authors/Adrian-Tudor_Panescu/1402906-name"/>
+    <ns6:ARG_2000029 rdf:resource="https://figshare.com/authors/Adrian-Tudor_Panescu/1402906"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://figshare.com/authors/Adrian-Tudor_Panescu/1402906">
+    <ns3:orcidId rdf:resource="http://orcid.org/0000-0002-8940-898X"/>
+    <rdfs:label>Adrian-Tudor Panescu</rdfs:label>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://figshare.com/authors/Adrian-Tudor_Panescu/1402906-name">
+    <ns5:familyName>Panescu</ns5:familyName>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Name"/>
+    <ns5:givenName>Adrian-Tudor</ns5:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://figshare.com/articles/TAO_Facebook_s_Distributed_Data_Store_for_the_Social_Graph/2688022-authorship-1402906">
+    <ns3:relates rdf:resource="https://figshare.com/authors/Adrian-Tudor_Panescu/1402906-vcard"/>
+    <ns3:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ns3:rank>
+    <ns3:relates rdf:resource="https://figshare.com/articles/TAO_Facebook_s_Distributed_Data_Store_for_the_Social_Graph/2688022"/>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Authorship"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://orcid.org/0000-0002-8940-898X">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Thing"/>
+  </rdf:Description>
+</rdf:RDF>
