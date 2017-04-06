@@ -7,6 +7,9 @@ const articleReducer = (state = {}, action) => {
       state.customField = action.customField;
       state.xml = action.xml;
       return state;
+    case "ADD_XSLT":
+      state.new_xml = action.new_xml;
+      return state;
     default:
       return state;
   }

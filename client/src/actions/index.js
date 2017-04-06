@@ -59,10 +59,29 @@ export const addCustomField = (articleID, customField) => {
   }
 };
 
-export const ADD_XSLT = (xslt) => {
+export const addXSLTThunked = (new_xml) => {
   return {
     "type": "ADD_XSLT",
-    xslt
+    new_xml
   };
 };
+
+export const addXSLT = (xml, xslt) => {
+  return (dispatch) => {
+    fetch(`http://127.0.0.1:5000/xslt/`, {
+        "method": "post",
+        "headers": {
+          "Accept": "application/json",
+          "Constent-Type": "application/json"
+        },
+        "body": window.JSON.stringify({xml, xslt})
+        })
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      dispatch(addXSLTThunked(json.xml));
+    })
+  }
+}
 

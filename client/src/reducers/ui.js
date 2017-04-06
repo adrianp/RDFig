@@ -7,7 +7,7 @@ const uiReducer = (state = "displayArticleID", action) => {
     case "ADD_CUSTOM_FIELD":
       return "displayXSLT";
     case "ADD_XSLT":
-      return "displayXSLT";
+      return "finalXML";
     default:
       return state;
   }

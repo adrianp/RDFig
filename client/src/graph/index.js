@@ -63,9 +63,7 @@ const renderGraph = (raw_nodes) => {
             .text(function(d) { return d.name });
         })
 
-      chart.dispatch.on('renderEnd', function(){
-        console.log('render complete');
-      });
+      chart.dispatch.on('renderEnd', function(){});
       d3.select('#graph')
         .attr('width', width)
         .attr('height', height)

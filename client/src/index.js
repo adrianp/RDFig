@@ -3,7 +3,7 @@ import './index.css';
 import './App.css';
 import ArticleInputContainer from "./components/articleid_form.js";
 import CustomFieldInputContainer from "./components/custom_field_form.js";
-import XSLTInput from "./components/xslt_form.js";
+import XSLTInputContainer from "./components/xslt_form.js";
 import rdfApp from "./reducers"
 import { Provider, connect } from 'react-redux'
 import { createStore } from 'redux'
@@ -21,7 +21,9 @@ class App extends Component {
       case "displayCustomField":
         return <CustomFieldInputContainer />
       case "displayXSLT":
-        return <XSLTInput />
+        return <XSLTInputContainer />
+      case "finalXML":
+        return <XSLTInputContainer />
       default:
         return <ArticleInputContainer />
     }

@@ -50,7 +50,9 @@ def add_field(article_id):
 
 @app.route("/xslt/", methods=["POST"])
 def xslt():
-    return ""
+    data = json.loads(request.data)
+    result = data["xml"]
+    return jsonify({"xml": result})
 
 
 if __name__ == "__main__":
