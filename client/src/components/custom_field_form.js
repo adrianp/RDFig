@@ -9,19 +9,20 @@ class CustomFieldInput extends Component {
     this.state = {"fieldOntology": "http://purl.org/dc/elements/1.1/", "fieldName": "spatial", "fieldValue": "Romania"};
     this.handleOntologyChange = this.handleOntologyChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleValueChange = this.handleValueChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleOntologyChange(e) {
-    this.setState.fieldOntology = e.target.value;
+    this.setState({fieldOntology: e.target.value});
   }
 
   handleNameChange(e) {
-    this.setState.fieldName = e.target.value;
+    this.setState({fieldName: e.target.value});
   }
 
   handleValueChange(e) {
-    this.setState.fieldValue = e.target.value;
+    this.setState({fieldValue: e.target.value});
   }
 
   handleSubmit(e) {

@@ -4,6 +4,11 @@ import json
 import rdflib
 import requests
 import xml.etree.ElementTree as ET
+import lxml.etree as LET
+from StringIO import StringIO
+from io import BytesIO
+
+from utils import oai_root_path
 
 app = Flask(__name__)
 CORS(app)
@@ -11,8 +16,8 @@ CORS(app)
 def get_rdf(article_id):
     r = requests.get("https://api.figshare.com/v2/oai?verb=GetRecord&metadataPrefix=rdf&identifier=oai:figshare.com:article/{}".format(article_id))
 
-    root = ET.fromstring(r.text)
-    metadata = root.find("{http://www.openarchives.org/OAI/2.0/}GetRecord").find('{http://www.openarchives.org/OAI/2.0/}record').find('{http://www.openarchives.org/OAI/2.0/}metadata').find('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}RDF')
+    root = ET.fromstring(r.text.encode("utf-8"))
+    metadata = root.find(oai_root_path)
     metadata_string = ET.tostring(metadata)
 
     g=rdflib.Graph()
@@ -51,8 +56,14 @@ def add_field(article_id):
 @app.route("/xslt/", methods=["POST"])
 def xslt():
     data = json.loads(request.data)
-    result = data["xml"]
-    return jsonify({"xml": result})
+
+    data["xml"] = data["xml"].replace('encoding="UTF-8"', '')
+    xml = LET.parse(StringIO(data["xml"]))
+    xsl = LET.parse(StringIO(data["xslt"]))
+
+    transform = LET.XSLT(xsl)
+    result = transform(xml)
+    return jsonify({"xml": LET.tostring(result, pretty_print=True)})
 
 
 if __name__ == "__main__":
