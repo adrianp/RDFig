@@ -22,3 +22,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#graphContainer {
+  max-width: 100%;
+  height: 1000px;
+  margin: auto;
+}
