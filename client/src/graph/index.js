@@ -81,7 +81,6 @@ const renderGraph = (rdf) => {
   window.setTimeout(() => {
     graph.killForceAtlas2();
   }, 3000);
-  window.sigma.plugins.relativeSize();
 
 }
 
