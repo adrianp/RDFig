@@ -6,7 +6,7 @@ import { addArticleID } from '../actions';
 class ArticleInput extends Component {
   constructor(props) {
     super(props);
-    this.state = {"articleID": 2688022}
+    this.state = {"articleID": 3219238}
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }

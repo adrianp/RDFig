@@ -6,7 +6,7 @@ import { addCustomField } from '../actions';
 class CustomFieldInput extends Component {
   constructor(props) {
     super(props);
-    this.state = {"fieldOntology": "http://purl.org/dc/elements/1.1/", "fieldName": "spatial", "fieldValue": "Romania"};
+    this.state = {"fieldOntology": "http://purl.org/dc/elements/1.1/", "fieldName": "spatial", "fieldValue": "U.S.A."};
     this.handleOntologyChange = this.handleOntologyChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleValueChange = this.handleValueChange.bind(this);

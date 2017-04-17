@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './index.css';
 import './App.css';
 import ArticleInputContainer from "./components/articleid_form.js";
 import CustomFieldInputContainer from "./components/custom_field_form.js";
